@@ -15,6 +15,10 @@ const io = new Server(server, {
     },
 });
 
+app.get("/", function (req, res) {
+    res.send("Todo ha salido bien");
+});
+
 io.on("connection", (socket) => {
     console.log(`User Connected: ${socket.id}`);
 
